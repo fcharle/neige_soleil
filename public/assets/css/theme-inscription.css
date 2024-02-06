@@ -20,6 +20,8 @@ body, html {
     background-color: #4070f4;
     height: 100vh;
     padding: 20px;
+    max-width: unset!important;
+    margin: 0!important;
 }
 
 .form {
@@ -29,8 +31,6 @@ body, html {
     width: 100%;
     max-width: 430px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    max-height: 600px;
-    overflow-y: auto;
 }
 
 header {

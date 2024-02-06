@@ -15,14 +15,14 @@ session_start();
 $userInfo = []; // Initialiser un tableau pour stocker les informations de l'utilisateur
 if (isset($_SESSION['email'])) {
     // Supposons que vous ayez une fonction getUserInfoById qui récupère les informations de l'utilisateur
-    require_once 'chemin/vers/votre/fichier/modele_user.php'; // Inclure votre modèle ou script de connexion à la base de données
+    require_once 'chemin/vers/votre/fichier/../modele/modele_user.php'; // Inclure votre modèle ou script de connexion à la base de données
     $modele = new Modele(); // Créer une instance de votre modèle
     $userInfo = $modele->getUser($_SESSION['email']); // Obtenir les informations
 }
 ?>
 
 <body>
-    <form action="./php/traitement_modification.php" method="post"></form>
+    <form action="./php/functions/modification.php" method="post"></form>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10 col-xl-8 mx-auto">
@@ -49,7 +49,7 @@ if (isset($_SESSION['email'])) {
                         </div>
                 </div>
                 <hr class="my-4" />
-                <form action="./php/traitement_modification.php" method="post" class="mon-formulaire">
+                <form action="./php/functions/modification.php" method="post" class="mon-formulaire">
                     <div class="field input-field">
                         <input type="text" name="nom" placeholder="Nom" required class="input" />
                     </div>

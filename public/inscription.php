@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Signup Form</title>
-    <link rel="stylesheet" href="assets/css/theme-inscription.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+<?php include './php/components/header.php' ?>
+<link href="assets/css/theme-inscription.css" rel="stylesheet" />
+</head>
+<body>
+  <main>
     <section class="container forms">
       <div class="form signup">
         <div class="form-content">
           <header>inscription</header>
-          <form action="./php/traitement_inscription.php" method="post">
+          <form action="./php/functions/inscription.php" method="post">
             <div class="field-group">
               <div class="field input-field half-width">
                 <input
@@ -97,7 +88,7 @@
           <div class="form-link">
             <span
               >Vous avez déjà un compte ?
-              <a href="connexion.html" class="link login-link"
+              <a href="connexion.php" class="link login-link"
                 >Connexion</a
               ></span
             >
@@ -107,6 +98,6 @@
             <span><a href="./index.php" class="link signup-link">Accueil</a></span> 
       </div>
     </section>
-    <script src="js/script.js"></script>
-  </body>
+  </main>
+</body>
 </html>

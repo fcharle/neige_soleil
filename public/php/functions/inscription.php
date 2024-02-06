@@ -1,5 +1,5 @@
 <?php
-require_once ('modele_user.php'); 
+require_once ('../modele/modele_user.php'); 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
@@ -28,6 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ));
 
     // Redirection ou affichage d'un message
-    header('Location: ../connexion.html'); 
+    header('Location: ../../connexion.php'); 
 }
 ?>

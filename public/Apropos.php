@@ -1,4 +1,6 @@
-<?php include './php/header.php' ?>
+<?php include './php/components/header.php' ?>
+</head>
+<body>
 
 <!-- ===============================================-->
 <!--    Main Content-->
@@ -8,7 +10,7 @@
 
 
 <main class="main" id="top">
-  <?php include './php/navbar.php' ?>
+  <?php include './php/components/navbar.php' ?>
   <section style="padding-top: 7rem;">
     <div class="bg-holder" style="background-image:url(assets/img/hero/hero-bg.svg);">
     </div>
@@ -19,4 +21,4 @@
 
 
 
-<?php include './php/footer.php' ?>
+<?php include './php/components/footer.php' ?>

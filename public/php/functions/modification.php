@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('modele_user.php');
+require_once('../modele/modele_user.php');
 
 // Vérifiez si l'utilisateur est connecté
 if (!isset($_SESSION['email'])) {

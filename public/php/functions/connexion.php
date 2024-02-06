@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once ('modele_user.php'); 
+require_once ('../modele/modele_user.php'); 
  
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['role'] = $connexion['role'];
 
         // Redirection ou affichage d'un message
-        header('Location: ../index.php');
+        header('Location: ../../index.php');
         echo "Connexion réussie!";
     }
     else{
