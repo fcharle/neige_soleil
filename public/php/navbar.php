@@ -8,7 +8,7 @@
                 <!--<li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="Equipement.html">Equipement</a></li>-->
                 <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="Apropos.php">A propos</a></li>
                 <?php if(!isset($_SESSION['email'])): ?>
-                    <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" href="connexion.html">Connexion</a></li>
+                    <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" href="connexion.php">Connexion</a></li>
                     <li class="nav-item px-3 px-xl-4"><a class="btn btn-outline-dark order-1 order-lg-0 fw-medium" href="inscription.html">Inscription</a></li>
                 <?php else: ?>
                     <li class="nav-item dropdown">
@@ -27,7 +27,7 @@
                             <a class="dropdown-item" href="#">Contacter support</a>
                         <?php endif; ?>
                         <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Modifier profil</a>
+                            <a class="dropdown-item" href="./modification_profile.html">Modifier profil</a>
                         </div>
                     </li>
                     <li class="nav-item px-3 px-xl-4"><a class="btn btn-outline-dark order-1 order-lg-0 fw-medium" href="./php/deconnexion.php">Déconnexion</a></li>

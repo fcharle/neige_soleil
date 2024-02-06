@@ -14,6 +14,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
 :root {
   --bs-blue: #747DEF;
   --bs-indigo: #6237FF;
@@ -19636,11 +19637,4 @@ iframe {
 .majestic-tabs .nav-item.show .nav-link {
   border-bottom-color: #DF6951;
 }
-/*----------------------------------------------
- Barre de recherche 
-------------------------------------------*/
-/*-----------------------------------------------
-|   User Styles
------------------------------------------------*/
 
-/*# sourceMappingURL=theme.css.map */
