@@ -44,7 +44,7 @@
 
   <!-- ============================================-->
   <!-- <section> begin ============================-->
-  <section class="pt-5 pt-md-9" id="service">
+  <section class="pt-1" id="service">
 
     <div class="container">
       <div class="position-absolute z-index--1 end-0 d-none d-lg-block"><img src="assets/img/category/shape.svg"

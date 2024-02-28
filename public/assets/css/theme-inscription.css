@@ -147,17 +147,6 @@ header {
     margin-top: 10px;
 }
 
-a.facebook, a.google {
-    color: #fff;
-    padding: 10px;
-    border-radius: 6px;
-    text-decoration: none;
-}
-
-.facebook-icon, .google-img {
-    margin-right: 8px;
-}
-
 @media screen and (max-width: 768px) {
     .field-group {
         flex-direction: column;

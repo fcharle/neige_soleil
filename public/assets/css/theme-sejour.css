@@ -1,0 +1,59 @@
+/* Styles généraux pour la barre de recherche */
+.search-box-elegant {
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* Arrière-plan blanc pour un look minimaliste */
+    padding: 10px;
+    border-radius: 5px; /* Bords arrondis pour un look doux */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre subtile pour du relief */
+    max-width: 600px; /* Ajustez selon vos besoins */
+    margin: auto; /* Centrer la barre de recherche */
+    gap: 10px; /* Espacement entre les éléments */
+  }
+  
+  .search-input-elegant {
+    border: 1px solid #ccc; /* Légère bordure pour définir les champs */
+    outline: none;
+    padding: 8px;
+    flex-grow: 1; /* Les champs prennent l'espace disponible */
+    border-radius: 5px; /* Bords arrondis pour les champs */
+  }
+  
+  /* Styles spécifiques pour les champs de date pour assurer leur visibilité */
+  .search-input-elegant[type="date"] {
+    min-width: 120px; /* Assurez une largeur minimum pour les champs de date */
+    background-color: #fff; /* Fond blanc pour les champs de date */
+    color: #333; /* Couleur du texte pour assurer la visibilité */
+  }
+  
+  /* Style pour le sélecteur de voyageurs */
+  .search-box-elegant select.search-input-elegant {
+    cursor: pointer; /* Curseur en forme de main pour indiquer la sélection */
+  }
+  
+  /* Style pour le bouton de recherche */
+  .search-button-elegant {
+    background-color: #007bff; /* Couleur de fond du bouton, ajustez selon votre thème */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px; /* Bords arrondis pour le bouton */
+    cursor: pointer; /* Curseur en forme de main pour indiquer l'action */
+  }
+  
+  .search-button-elegant img {
+    width: 20px; /* Taille de l'image dans le bouton */
+    height: auto;
+  }
+  
+  /* Ajustements pour les petits écrans */
+  @media (max-width: 768px) {
+    .search-box-elegant {
+      flex-direction: column; /* Les éléments s'empilent verticalement sur les petits écrans */
+      gap: 5px; /* Réduire l'espacement entre les éléments */
+    }
+  
+    .search-input-elegant, .search-button-elegant {
+      width: 100%; /* Les champs et le bouton prennent toute la largeur */
+    }
+  }
+  

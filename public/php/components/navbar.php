@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
     <div class="container">
         <a class="navbar-brand" href="index.php"><img src="assets/img/logo-neige-soleil.png" height="34" alt="logo" /></a>
@@ -10,7 +11,9 @@
                 <?php if(!isset($_SESSION['email'])): ?>
                     <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" href="connexion.php">Connexion</a></li>
                     <li class="nav-item px-3 px-xl-4"><a class="btn btn-outline-dark order-1 order-lg-0 fw-medium" href="inscription.php">Inscription</a></li>
-                <?php else: ?>
+                <?php else: 
+                   
+                    ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="profil.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Mon profil
@@ -18,12 +21,12 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <?php if(isset($_SESSION['role']) && $_SESSION['role'] == "admin"): ?>
                             <a class="dropdown-item" href="#">Dashbord</a>
-                            <a class="dropdown-item" href="#">Gerer utilisateur</a>
+                            <a class="dropdown-item" href="./admin.php">Gerer utilisateur</a>
                         <?php elseif(isset($_SESSION['role']) && $_SESSION['role'] == "user"): ?>
                             <a class="dropdown-item" href="#">Gerer réservation</a>
                             <a class="dropdown-item" href="#">Historique réservation</a>
                         <?php elseif(isset($_SESSION['role']) && $_SESSION['role'] == "proprio"): ?>
-                            <a class="dropdown-item" href="#">Gerer Logement</a>
+                            <a class="dropdown-item" href="./insert_house.php">Gerer Logement</a>
                             <a class="dropdown-item" href="#">Contacter support</a>
                         <?php endif; ?>
                         <div class="dropdown-divider"></div>

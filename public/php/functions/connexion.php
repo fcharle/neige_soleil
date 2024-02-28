@@ -18,10 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Vérification si l'utilisateur existe
     if($connexion != null){
         // Stockage des données dans la sessions
+        $_SESSION['id'] = $connexion['id'];
         $_SESSION['email'] = $connexion['email'];
         $_SESSION['nom'] = $connexion['nom'];
         $_SESSION['prenom'] = $connexion['prenom'];
         $_SESSION['role'] = $connexion['role'];
+
+       // var_dump($_SESSION);
 
         // Redirection ou affichage d'un message
         header('Location: ../../index.php');
