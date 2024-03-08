@@ -49,9 +49,19 @@ class Modele {
         return $res;
 
     }
-    public function insertHouse($tab) {
-        $requete = "INSERT INTO Habitations (nom, TypeH, adresse, CP, ville, Superficie, Capacite, PrixHabJ) VALUES (:nom, :TypeH, :adresse, :CP, :ville, :Superficie, :Capacite, :PrixHabJ);";
+    public function getStations(){
+        $requete = "SELECT * FROM Stations ;";  
         $select = $this->unPDO->prepare($requete);
+         
+        $select->execute();
+        $res = $select->fetchAll();
+        return $res;
+
+    }
+    public function insertHouse($tab) {
+        $requete = "INSERT INTO Habitations (nom, TypeH, adresse, CP, ville, Superficie, Capacite, PrixHabJ, IdProprio, CodeSta ) VALUES (:nom, :TypeH, :adresse, :CP, :ville, :Superficie, :Capacite, :PrixHabJ, :IdProprio, :CodeSta);";
+        $select = $this->unPDO->prepare($requete);
+        echo $requete ; 
         $donnees = array(
             ":nom" => $tab["nom"],
             ":TypeH" => $tab["typeH"],
@@ -60,12 +70,42 @@ class Modele {
             ":ville" => $tab["ville"],
             ":Superficie" => $tab["superficie"],
             ":Capacite" => $tab["capacite"],
-            ":PrixHabJ" => $tab["prixHabJ"]
+            ":PrixHabJ" => $tab["prixHabJ"],
+            ":IdProprio" => $tab["idUser"], 
+            ":CodeSta" => $tab["CodeSta"]
         );
-        var_dump($tab);
+        var_dump($donnees);
         $select->execute($donnees);
     }
- 
+    public function getHouseUser($idUser){
+        $requete = "SELECT * FROM Habitations WHERE IdProprio = :IdProprio;"; // Chercher 
+        $select = $this->unPDO->prepare($requete);
+        $donnees = array(":IdProprio" => $idUser);
+        $select->execute($donnees);
+        $res = $select->fetchAll();
+        return $res;
+    }
+    public function deleteHouse($id) {
+        // Récupére notre maison
+        // $requeteHouse = "SELECT * FROM Habitations WHERE id = :id;"; // Chercher 
+        // $select = $this->unPDO->prepare($requeteHouse);
+        // $donnees = array(":id" => $id);
+        // $select->execute($donnees);
+        // $res = $select->fetchAll();
+        // // Check si la maison existe OU si l'idUSer n'est pas le notre
+        // if($res == null || $res['IdUser'] != $_SESSION['id']){
+        //     return '';
+        // }
+        // Requete pour supprimer
+        $requete =  "DELETE FROM Habitations WHERE id = :id";
+        $update = $this->unPDO->prepare($requete);
+        
+        $donnees = array(
+            ":id"  => $id
+        );
+        $success = $update->execute($donnees);
+        return $success;
+    }
 
 }
 ?>

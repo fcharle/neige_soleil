@@ -1,6 +1,6 @@
 <?php
+session_start();
 require_once ('../modele/modele_house.php'); 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $TypeH = $_POST['TypeH'];
@@ -11,7 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $Adresse = $_POST['Adresse'];     
     $ville = $_POST['Ville']; 
     $PrixHabJ = $_POST['PrixHabJ']; 
-    
+    $idUser = $_SESSION['id'];
+    $CodeSta = $_POST['CodeSta'];
     
 
     $modele = new Modele();
@@ -23,10 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         "ville" => $ville,
         "capacite" => $Capacite,
         "adresse" => $Adresse,
-        "prixHabJ" => $PrixHabJ 
+        "prixHabJ" => $PrixHabJ,
+        "idUser" => $idUser, 
+        "CodeSta"=> $CodeSta
     ));
 
     // Redirection ou affichage d'un message
-    header('Location: ../../index.php'); 
+    header('Location: ../../gestion_house.php'); 
 }
 ?>

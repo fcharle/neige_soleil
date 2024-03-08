@@ -17,11 +17,11 @@ if (isset($_SESSION['email'])) {
             <div class="col-md-4 mb-4">
               <div class="card overflow-hidden shadow">
                 <img class="card-img-top"
-                <?php if($house['TypeH'] == "maison"): ?>
-                  src="assets/img/logements/acceuil1.jpg"
-                <?php elseif($house['TypeH'] == "chalet"): ?>
+                <?php if($house['TypeH'] == "Maison"): ?>
+                  src="assets/img/logements/Acceuil1.jpg"
+                <?php elseif($house['TypeH'] == "Chalet"): ?>
                   src="assets/img/logements/acceuil2.jpg.jpg"
-                <?php elseif($house['TypeH'] == "appartement"): ?>
+                <?php elseif($house['TypeH'] == "Appartement"): ?>
                   src="assets/img/logements/acceuil3.jpg.jpg"
                 <?php endif; ?> 
                   alt="Image de logement" />

@@ -26,7 +26,7 @@
                             <a class="dropdown-item" href="#">Gerer réservation</a>
                             <a class="dropdown-item" href="#">Historique réservation</a>
                         <?php elseif(isset($_SESSION['role']) && $_SESSION['role'] == "proprio"): ?>
-                            <a class="dropdown-item" href="./insert_house.php">Gerer Logement</a>
+                            <a class="dropdown-item" href="./gestion_house.php">Gerer Logement</a>
                             <a class="dropdown-item" href="#">Contacter support</a>
                         <?php endif; ?>
                         <div class="dropdown-divider"></div>

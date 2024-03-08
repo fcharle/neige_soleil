@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
     if ($house == null) {
         header('Location: ./index.php');
     }
-    // TODO: Récupérer les réservations si nécessaire
+    
 } else {
     header('Location: ./index.php');
 }
@@ -26,7 +26,7 @@ if (isset($_GET['id'])) {
             </div>
             <!-- Détails du bien -->
             <div class="col-md-6">
-                <img src="<?php echo $house["Image"]; ?>" class="img-fluid" alt="Image du bien">
+                <img src=<?php echo $house[""]; ?>" class="img-fluid" alt="Image du bien">
             </div>
             <div class="col-md-6">
                 <h3>Description</h3>
@@ -38,7 +38,7 @@ if (isset($_GET['id'])) {
                     <li>Ville: <?php echo htmlspecialchars($house["Ville"]); ?> </li>
                     <!-- Ajoutez plus de détails selon vos données -->
                 </ul>
-                <!-- Bouton de réservation (exemple) -->
+                
                 <a href="./reservation.php?id=<?php echo $house['id']; ?>" class="btn btn-primary">Réserver</a>
             </div>
         </div>

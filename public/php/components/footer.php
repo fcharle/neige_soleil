@@ -45,7 +45,7 @@
           </div>
         </div>
       </div>
-    </div><!-- end of .container-->
+    </div><!-- end of .containe test ecouter-->
 </footer>
 <div class="py-5 text-center">
   <p class="mb-0 text-secondary fs--1 fw-medium">Tout droit Réservez à administration@neige&soleil.fr</p>
