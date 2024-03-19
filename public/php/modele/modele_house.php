@@ -1,6 +1,6 @@
 <?php
 
-class Modele {
+class ModeleHouse {
     private $unPDO;
     public function __construct(){
         try{
