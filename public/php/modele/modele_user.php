@@ -121,6 +121,8 @@ class Modele {
         $success = $update->execute($donnees);
         return $success;
     }
+   
+    
 }
 
 ?>

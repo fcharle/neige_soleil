@@ -60,7 +60,7 @@ if ($houses === false) {
                     <td><?php echo htmlspecialchars($house['TypeH']); ?></td>
                     <td><?php echo htmlspecialchars($house['CodeSta']); ?></td>
                     <td>
-                    <a href="#" class="btn btn-info">
+                    <a href="confirmation_resaprorio.php" class="btn btn-info">
                             Reservations
                         </a>    
                     <a href="#" class="btn btn-primary">

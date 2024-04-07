@@ -41,13 +41,14 @@ class ModeleReservation {
         var_dump($donnees);
         $select->execute($donnees);
     }
-    public function getResaUser($idUser){
-        $requete = "SELECT * FROM Reservation WHERE IdClient = :IdClient;"; // Chercher 
-        $select = $this->unPDO->prepare($requete);
-        $donnees = array(":IdClient" => $idUser);
-        $select->execute($donnees);
-        $res = $select->fetchAll();
-        return $res;
+    function getResaUser($userId) {
+        $requete = "SELECT r.*, h.Nom, h.Adresse, h.Ville, h.PrixHabJ, h.Description
+                    FROM Reservations r
+                    JOIN Habitations h ON r.IdHouse = h.id
+                    WHERE r.IdClient = :userId";
+        $stmt = $this->unPDO->prepare($requete);
+        $stmt->execute([':userId' => $userId]);
+        return $stmt->fetchAll();
     }
     public function deleteResa($id) {
 
@@ -66,8 +67,14 @@ class ModeleReservation {
     
         // Prépare et exécute la requête SQL
         $sql = "SELECT * FROM reservations WHERE IdHouse = :idHouse AND (DateD <= :endDate AND DateF >= :startDate)";
-        $stmt = $this->pdo->prepare($sql);
+        $stmt = $this->unPDO->prepare($sql);
         $stmt->execute(['idHouse' => $idHouse, 'startDate' => $startDate, 'endDate' => $endDate]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public function getReservationsForBien($idHouse) {
+        $requete = "SELECT * FROM reservations WHERE idHouse = :idHouse";
+        $stmt = $this->unPDO->prepare($requete);
+        $stmt->execute(['idHouse' => $$idHouse]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

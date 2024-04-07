@@ -6,7 +6,7 @@
         <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">
                 <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="sejour.php">Séjour</a></li>
-                <!--<li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="Equipement.html">Equipement</a></li>-->
+
                 <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="Apropos.php">A propos</a></li>
                 <?php if(!isset($_SESSION['email'])): ?>
                     <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" href="connexion.php">Connexion</a></li>
@@ -23,7 +23,7 @@
                             <a class="dropdown-item" href="#">Dashbord</a>
                             <a class="dropdown-item" href="./admin.php">Gerer utilisateur</a>
                         <?php elseif(isset($_SESSION['role']) && $_SESSION['role'] == "user"): ?>
-                            <a class="dropdown-item" href="./gerer_resa.php">Gerer réservation</a>
+                            <a class="dropdown-item" href="./gestions_resa.php">Gerer réservation</a>
                             <a class="dropdown-item" href="#">Historique réservation</a>
                         <?php elseif(isset($_SESSION['role']) && $_SESSION['role'] == "proprio"): ?>
                             <a class="dropdown-item" href="./gestion_house.php">Gerer Logement</a>

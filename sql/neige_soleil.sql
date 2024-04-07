@@ -92,3 +92,8 @@ INSERT INTO `Habitations` (`id`, `TypeH`, `Nom`, `Superficie`, `Capacite`, `Adre
 INSERT INTO Reservations VALUES(1, "2024-01-23", "2024-04-10", "2024-04-20", 5, "attente", 6, 1); 
 INSERT INTO Reservations VALUES(2, "2024-01-17", "2024-04-01", "2024-04-09", 5, "refus", 6, 1); 
 INSERT INTO Reservations VALUES(3, "2024-01-17", "2024-03-15", "2024-03-29", 5, "valide", 6, 1);
+
+
+
+NSERT INTO `User` (`id`, `nom`, `prenom`, `adresse`, `CP`, `ville`, `email`, `telephone`, `mdp`, `role`) VALUES
+(6, 'fab', 'fab', '84 rue du docteur vaillant', '91700', 'Saint-Genevieve-des-Bois', 'a@gmail.com', '0619994533', '123', 'admin'),
